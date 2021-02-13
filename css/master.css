@@ -19,6 +19,10 @@ nav {
   background: #222;
   padding: 0 15px;
 }
+footer {
+  min-height:50px;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -44,24 +48,41 @@ a {
 
 .container-home {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 2fr 1fr 2fr;
+  margin: 0px 10px 0px 10px;
+  /* grid-template-columns: 1fr 3fr; */
+  /* grid-template-rows: auto auto 1fr 1fr auto; */
+  /* grid-template-areas:  */
+    /* "title title" */
+    /* "headshot info" */
+    /* "links links"; */
+
+  grid-template-rows: auto;
   grid-template-areas: 
-    "title title"
-    "info info"
-    "links links";
+    "title"
+    "headshot"
+    "info"
+    "links";
+  gap: 2px;
 }
 .home-title{
   grid-area: title;
+  background-color: red;
+}
+
+.home-headshot {
+  grid-area: headshot;
+  background-color: purple;
 }
 
 .home-info {
   grid-area: info;
+  background-color: green;
 
 }
 
 .home-links {
   grid-area: links;
+  background-color: yellow;
 }
 
 /* Mobile menu */
@@ -203,5 +224,14 @@ a {
   }
   .submenu-active {
       border-radius: 0;
+  }
+
+  .container-home {
+    grid-template-columns: 1fr 3fr; */
+    grid-template-rows: auto auto 1fr 1fr auto;
+    grid-template-areas: 
+      "title title"
+      "headshot info"
+      "links links";
   }
 }
