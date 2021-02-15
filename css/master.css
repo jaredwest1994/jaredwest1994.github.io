@@ -66,14 +66,36 @@ header::after {
 
 
 body {
-/*   padding: 1em; */
+  /* padding: 1em; */
   margin: 0;
   background-color: lightgrey;
 /*   display: flex; */
 }
-.main {
+.main, .home-links {
   margin:10px;
-  padding:0;
+  padding:5 em;
+  background-color: white;
+  font-size: 20px;
+}
+
+.main {
+  padding: 1em;
+}
+
+
+.main h2 {
+  padding: 1px;
+}
+.main p {
+  padding:1em;
+}
+
+.home-links {
+  color:black;
+  padding: 1em;
+}
+.home-links a {
+  color: black;
 }
 
 .interest-links {
@@ -104,6 +126,59 @@ body {
 .interest-links a {
   text-decoration: none;
 }
+
+/* Layout of the interest posts */
+#intro > .posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+  padding:0;
+}
+#intro > .posts > * {
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 4rem;
+  width: 33%;
+}
+
+#intro > .posts > article {
+  border-color: #eeeeee;
+  border-left-width: 2px;
+  border-style: solid;
+  border-top-width: 2px;
+  text-align: center;
+}
+
+/* Actions */
+
+ul.actions {
+  display: flex;
+  cursor: default;
+  list-style: none;
+  margin-left: -1rem;
+  padding-left: 0;
+}
+
+ul.actions li {
+  padding: 0 0 0 1rem;
+  vertical-align: middle;
+}
+
+ul.actions.explore {
+  justify-content: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+ul.actions.explore li:first-child {
+  padding-left: 0;
+}
+
+
+
+
 
 /* Mobile menu */
 .menu {
