@@ -28,9 +28,14 @@ a {
   color: white;
   text-decoration: none;
 }
+
 a.more {
-  color: black;
+  color: rgb(0, 0, 0);
+  border-style: solid;
+  border-color: rgb(41, 41, 41);
+  padding: 2px 10px 5px 10px;
 }
+
 .menu,
 .submenu {   
   list-style-type: none;
@@ -142,6 +147,10 @@ body {
   border-style: solid;
   border-top-width: 2px;
   text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* Actions */
@@ -264,6 +273,14 @@ a.image img {
 a.image:hover img {
   transform: scale(1.05);
   }
+
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 
 
