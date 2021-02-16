@@ -21,8 +21,10 @@ nav {
 }
 footer {
   min-height:50px;
-  padding-left: 1em;;
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
 
 a {
   color: white;
@@ -138,7 +140,7 @@ body {
   flex-shrink: 1;
   flex-grow: 0;
   padding: 4rem;
-  width: 33%;
+  width: 100%;
 }
 
 #intro > .posts > article {
@@ -153,6 +155,34 @@ body {
   text-decoration: underline;
 }
 
+/* Layout of the interest posts for the exploring page */
+
+#intro-hike > .posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+  padding:0;
+}
+#intro-hike > .posts > * {
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 4rem;
+  width: 100%;
+}
+
+#intro-hike > .posts > article {
+  border-color: #eeeeee;
+  border-left-width: 2px;
+  border-style: solid;
+  border-top-width: 2px;
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
 /* Actions */
 
 ul.actions {
@@ -216,7 +246,7 @@ ul.actions.explore li:first-child {
   display: block;
   margin: auto;
   margin-bottom: 2.5rem;
-  width: 100%;
+  width: 90%;
 }
 
 .image.fit:first-child {
@@ -249,7 +279,7 @@ ul.actions.explore li:first-child {
   width: 100%;
 }
 
-  @media screen and (max-width: 736px) {
+  @media all and (max-width: 200px) {
 
     .image.fit {
       margin: 2rem 0;
@@ -281,7 +311,13 @@ a.image:hover img {
   width: 50%;
 }
 
-
+iframe {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #777;
+  display: block;
+}
 
 
 
@@ -426,6 +462,130 @@ a.image:hover img {
       border-radius: 0;
   }
 
+  /* formats into three columns */
+  #intro > .posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    padding:0;
+  }
+  #intro > .posts > * {
+    flex-shrink: 1;
+    flex-grow: 0;
+    padding: 4rem;
+    width: 33%;
+  }
+  
+  #intro > .posts > article {
+    border-color: #eeeeee;
+    border-left-width: 2px;
+    border-style: solid;
+    border-top-width: 2px;
+    text-align: center;
+  }
+
   
 }
 
+
+/* styling for slideshow */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  padding-top: 1em;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+.prev {
+  left:0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
